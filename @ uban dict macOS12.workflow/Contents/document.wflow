@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>509</string>
+	<string>512</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -28,7 +28,7 @@
 				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
-					<string>Automator</string>
+					<string>自动操作</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
@@ -55,7 +55,7 @@
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Run Shell Script.action</string>
 				<key>ActionName</key>
-				<string>Run Shell Script</string>
+				<string>运行Shell脚本</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
@@ -81,10 +81,10 @@ def get_definitions(res_list):
     definitions = []
     c = 1
     for i in res_list:
-        d = i['definition'].replace('[', '').replace(']','').encode('utf-8')
-        e = i['example'].replace('[', '').replace(']','').encode('utf-8')
-        vote = str(str(i['thumbs_up'])+" ▲ | ▼ "+str(i['thumbs_down']).encode('utf-8'))
-        date = i['written_on'][:10].encode('utf-8')
+        d = i['definition'].replace('[', '').replace(']','')
+        e = i['example'].replace('[', '').replace(']','')
+        vote = str(str(i['thumbs_up'])+" ▲ | ▼ "+str(i['thumbs_down']))
+        date = i['written_on'][:10]
         output = str(str(c)+'.\n\n'+d+'\n\n'+'Example:\n'+e+'\n\n\n'+vote+'\n\n'+date).replace('\n','[&lt;&gt;]')
         definitions.append(output)
         c+=1
@@ -100,7 +100,7 @@ for i in res_list:
 					<key>inputMethod</key>
 					<integer>0</integer>
 					<key>shell</key>
-					<string>/usr/bin/python</string>
+					<string>/usr/local/bin/python3</string>
 					<key>source</key>
 					<string></string>
 				</dict>
@@ -123,9 +123,9 @@ for i in res_list:
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
-					<string>Script</string>
-					<string>Command</string>
-					<string>Run</string>
+					<string>脚本</string>
+					<string>命令</string>
+					<string>运行</string>
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
@@ -207,7 +207,7 @@ for i in res_list:
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>389.000000:305.000000</string>
+				<string>309.000000:305.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -232,7 +232,7 @@ for i in res_list:
 				<string>1.0</string>
 				<key>AMApplication</key>
 				<array>
-					<string>Automator</string>
+					<string>自动操作</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
@@ -251,7 +251,7 @@ for i in res_list:
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Run JavaScript.action</string>
 				<key>ActionName</key>
-				<string>Run JavaScript</string>
+				<string>运行JavaScript</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
@@ -275,7 +275,7 @@ for i in res_list:
 				<string>73CDD389-D6F1-433B-ADA4-8C797C7F1ACD</string>
 				<key>Keywords</key>
 				<array>
-					<string>Run</string>
+					<string>运行</string>
 					<string>JavaScript</string>
 				</array>
 				<key>OutputUUID</key>
@@ -310,7 +310,7 @@ for i in res_list:
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>389.000000:550.000000</string>
+				<string>309.000000:550.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run JavaScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -320,7 +320,7 @@ for i in res_list:
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>C62B52E1-F0DF-4180-8793-D39884FFA5D3</key>
+		<key>23D261C9-2451-4D5A-B493-6E4CCC66B37F</key>
 		<dict>
 			<key>from</key>
 			<string>8FFC5A63-C1DA-4A65-B7C4-59A408801793 - 8FFC5A63-C1DA-4A65-B7C4-59A408801793</string>
@@ -353,7 +353,7 @@ for i in res_list:
 		b3JTcGFjZV1OU0NhdGFsb2dOYW1lV05TQ29sb3KACIADEAaAAoAEVlN5c3Rl
 		bV8QEXN5c3RlbU9yYW5nZUNvbG9y1RobDxwNHR4fIBJcTlNDb21wb25lbnRz
 		VU5TUkdCXxASTlNDdXN0b21Db2xvclNwYWNlSTEgMC41IDAgMU8QKDAuOTg5
-		MjI4MzY3OCAwLjQxNTMxMzk1OTEgMC4wMzE4MjA0MDE1NQAQAYAFgAjTIyQN
+		MjMyMzAxNyAwLjQxNTMzMDQzOTggMC4wMzE4MTA4OTQ2MQAQAYAFgAjTIyQN
 		JSYnVE5TSURVTlNJQ0MQB4AGgAdPEQxIAAAMSExpbm8CEAAAbW50clJHQiBY
 		WVogB84AAgAJAAYAMQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAA
 		AAAAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -440,17 +440,17 @@ for i in res_list:
 		<key>presentationMode</key>
 		<integer>11</integer>
 		<key>processesInput</key>
-		<integer>0</integer>
+		<false/>
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.text</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>
-		<integer>0</integer>
+		<false/>
 		<key>systemImageName</key>
 		<string>NSActionTemplate</string>
 		<key>useAutomaticInputType</key>
-		<integer>0</integer>
+		<false/>
 		<key>workflowTypeIdentifier</key>
 		<string>com.apple.Automator.servicesMenu</string>
 	</dict>
